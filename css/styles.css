@@ -205,7 +205,7 @@ align-items: center;
     
 }
 
-.btn{
+.hero .button {
     border: 1px solid var(--blue);
     display: inline-block;
     padding: 10px 32px;
@@ -230,8 +230,8 @@ align-items: center;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-  .hero .btn:hover,
-  .btn:focus {
+.hero .button :hover,
+.hero .button :focus {
     background-color: #188ce8;
   }
 
@@ -246,6 +246,61 @@ align-items: center;
     
 }
 
+
+
+/* modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+  
+    width: 100%;
+    height: 100%;
+  
+    background: rgba(0, 0, 0, 0.2);
+  
+    transition-property: opacity;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .backdrop.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  
+    width: 528px;
+    height: 581px;
+  
+    background: #ffffff;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+  
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  .modal .modal-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    padding: 5px;
+  
+    width: 30px;
+    height: 30px;
+  
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+  
+  /* --page portfolio-- */
 
 
 /* details */
@@ -798,6 +853,7 @@ align-items: center;
     letter-spacing: 0.03em;
     text-decoration: none;
 }
+
 
 .footer-info:hover,
 .footer-info:focus {
