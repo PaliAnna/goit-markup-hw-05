@@ -215,11 +215,8 @@ align-items: center;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-
-
     margin-top: 30px;
     align-items: center;
     text-align: center;
@@ -233,12 +230,7 @@ align-items: center;
 .hero .button :hover,
 .hero .button :focus {
     background-color: #188ce8;
-  }
-
-
-
-
-
+}
 
 .section{
     padding-top: 94px;
@@ -300,8 +292,7 @@ align-items: center;
     border-radius: 50%;
   }
   
-  /* --page portfolio-- */
-
+  
 
 /* details */
 .details{
@@ -309,9 +300,6 @@ align-items: center;
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
-
-
 
 .details-title{
     color: var(--primary-text-color);
@@ -360,13 +348,10 @@ align-items: center;
     background-image: url(..//img/icons_img/astronaut-1.svg );
 }
 
-
 .details-item {
     flex-basis: calc(100% / 4 - 30px);
-    
     margin-left: 30px;
     margin-top: 30px;
-   
 }
 
 .details-text {
@@ -450,16 +435,6 @@ align-items: center;
 
 
 
-
-
-/* .occupation{
-    background-color: var(--main-background);   
-} */
-
-
-
-
-
 /* team */
 
 .team {
@@ -509,7 +484,7 @@ align-items: center;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.18;
-    /* text-align: center; */
+  
     letter-spacing: 0.03em;
     margin-bottom: 10px;
 }
@@ -602,9 +577,6 @@ align-items: center;
   .social-icons-link-footer:focus {
     background-color: var(--blue);
   }
-  
-
-
 
  /*<!-- Постоянные клиенты -->*/ 
         /*  clients */ 
@@ -664,7 +636,6 @@ align-items: center;
          
 
   /* Portfolio */
-
 /* Фильтры */
 .filter {
     background-color: var(---white);
@@ -686,16 +657,13 @@ align-items: center;
 .link-filter {
     display: inline-block;
     min-width: 73px;
-    
     color: var(--primary-text-color);
     font-family: inherit;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62; 
-
     text-align: center;
     letter-spacing: 0.03em;
-      
     padding-right: 22px;
     padding-left: 22px;
     padding-top: 9px;
@@ -714,10 +682,6 @@ align-items: center;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
-
-
-
 .filter .link-filter:hover,
 .link-filterk:focus {
     background: var(--blue);
@@ -727,12 +691,7 @@ align-items: center;
 }
 
 
-
-
-
-
 /* Offer */
-
 
 .Offer {
     background-color: var(---white);
@@ -796,13 +755,73 @@ align-items: center;
     text-decoration: none;
     padding-bottom: 20px;
     
-  }
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+}
 .offer .link:hover,
 .offer .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+.offer-overlay {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .offer-overlay::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  
+    background: rgba(33, 150, 243, 0.9);
+    opacity: 0;
+  
+    transition-property: opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+  }
+  .offer .link:hover .offer-overlay::before,
+  .offer .link:focus .offer-overlay::before {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .offer-overlay > .description {
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-right: 24px;
+    padding-left: 24px;
+  
+    font-size: 18px;
+    line-height: 1.555;
+    color: #ffffff;
+    opacity: 0;
+  
+    transition-property: opacity, transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(100%);
+  }
+  
+  .offer .link:hover .description,
+  .offer .link:focus .description {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+
+
+
+
+
+
+
 
 /* footer */
 .footer {
