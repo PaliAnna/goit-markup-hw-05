@@ -69,8 +69,7 @@ img {
     background-color: var(--white);
 }
 .header{
-    padding-top: 24px;
-    padding-bottom: 25px;
+    
     background-color: var(--white);
     border-bottom: 1px solid #ECECEC;
     
@@ -78,8 +77,11 @@ img {
 
 .header .contact-linc {
     margin-right: 50px;
-}
 
+}
+.header .icon-clients {
+    margin-right: 10px
+}
 .header .logo {
     margin-right: 121px;
 }
@@ -88,6 +90,7 @@ img {
 display: flex;
 justify-content: flex-end;
 align-items: center;
+
 }
 
 .navigation{
@@ -105,6 +108,8 @@ align-items: center;
     letter-spacing: 0.03em;
     text-decoration: none;
     margin-right: 93px;
+    padding-top: 24px;
+    padding-bottom: 25px;
 }
 .logo-studio{
     color: var(--primary-text-color);
@@ -132,21 +137,33 @@ align-items: center;
 
 .menu {
    display: inline-flex;
+ 
 }
 
 .menu-item:not(:last-child) {
     margin-right: 50px;
 
 }
+.menu-item {
+padding-top: 32px;
+padding-bottom: -24px;
 
+}
 .info{
     color: var(--text-color-p);
-
+    
+    
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     text-decoration: none;
+display: flex;
+align-items: center;
+    
+    
+  
+    padding-bottom: 32px;
 }
 .info:hover,
 .info:focus{
@@ -159,6 +176,30 @@ align-items: center;
 .menu-item a:focus{
     color: var(--blue);
 }
+/* подчёркивание текущей ссылки.*/
+.header .site-link.current::after {
+   
+    display: block;
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: 0; 
+    margin-top: 24px;
+    
+position: relative;
+         
+    background-color: var(--blue);
+    border-radius: 2px;
+        
+
+} 
+
+
+
+
+
 
 
 
@@ -623,6 +664,7 @@ align-items: center;
   }
   .icon-clients {
     fill: currentColor;
+
   }
   .icon-link:hover .icon-clients,
   .icon-link:focus .icon-clients {
@@ -672,9 +714,9 @@ align-items: center;
     text-align: center;
     border: none;
     font-family: "Roboto";
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
+    
+  
+    
     letter-spacing: 0.03em;
     color: var(--black);
     transition-property: background-color, color;
@@ -728,8 +770,7 @@ align-items: center;
     margin-left: 30px;
     margin-top: 30px;
     width: 370px;
-    border: 1px solid #EEEEEE;
-     border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .offer-content {
